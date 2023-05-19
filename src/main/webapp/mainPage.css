@@ -1,0 +1,530 @@
+@font-face {
+	font-family: 'Pro';
+	src: url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,200&display=swap');
+}
+
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+.bigContainer{
+  display: grid;
+  background-image: url(img/sky.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+.bigContainer:before{
+	content: '';
+	position: absolute;
+	box-sizing: border-box;
+	background-color: black;
+	opacity: 0.85;
+	z-index: -1;
+	top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right, black, gray);
+}
+
+
+
+.logReg{
+
+margin-left: auto;
+margin-right: 4em;
+margin-top: 15px;
+margin-bottom: 15px;
+}
+
+
+.title{
+	display: grid;
+	place-items: center;
+	
+	/*background-image: url(img/onepiece.jpg), url(img/naruto2.jpg), url(img/bleach2.png), url(img/DBS.jpg);
+	background-size: 25%, 25%, 25%;
+	background-position-x: 0px, 480px, 960px, 1440px;
+	background-position-y: 0px, -40px, -5px, 0px;
+	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;*/
+}
+
+.pageTitle{
+	color: white;
+	font-family: Pro;
+	font-size: 60px;
+	margin-bottom: 0px;
+	margin-top: 90px;
+	padding: 0px;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	position: absolute;
+	  
+}
+
+.desc{
+	color: white;
+	font-family: Pro;
+	margin-top: 170px;
+	padding: 0px;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	position: absolute;
+
+}
+
+.desc2{
+	color: white;
+	font-family: Pro;
+	margin-top: 0px;
+	margin-left: 100px;
+	margin-right: 100px;
+	padding: 0px;
+	text-align: justify;
+	font-size: 16px;
+	margin-bottom: 0px;
+}
+
+.imga{
+	float: left;
+	width: 25%;
+	height: 120px;
+	object-fit: cover;
+	object-position: 0px 0%;
+
+}
+
+
+
+.exp{
+	display: grid;
+	place-items: center;
+	margin-bottom: 0px;
+}
+
+.work{
+	color: white;
+	font-family: Pro;
+	margin-top: 80px;
+	padding: 0px;
+	font-size: 40px;
+	margin-bottom: 25px;
+}
+
+.linku{
+	background-color: purple;
+	color: black;
+	border-style: solid;
+	border-width: 2px;
+	font-family: Pro;
+	text-decoration: none;
+	height: 20px;
+	text-align: center;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	border-radius: 10px;
+}
+
+.linku:hover{
+	color: white;
+	border-color: white;
+	cursor: pointer;
+}
+
+.welcome{
+	background-color: purple;
+	color: black;
+	border-style: solid;
+	border-width: 2px;
+	font-family: Pro;
+	text-decoration: none;
+	height: 20px;
+	text-align: center;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	border-radius: 10px;
+}
+
+.wBtn{
+	display: grid;
+	place-items: center;
+	margin-top: 60px;
+	margin-bottom: 20px;
+}
+
+.wBtnv2{
+	display: grid;
+	place-items: center;
+	margin-top: 60px;
+	margin-bottom: 0px;
+}
+
+.wBtn2{
+	display: grid;
+	place-items: center;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+
+.wBtn3{
+	display: grid;
+	place-items: center;
+	margin-top: 0px;
+	margin-bottom: 60px;
+}
+
+.wBtn4{
+	display: grid;
+	place-items: center;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.wBtn5{
+	display: grid;
+	place-items: center;
+	margin-top: 0px;
+	margin-bottom: 30px;
+}
+
+.howTo {
+  display: inline-block;
+  border-radius: 10px;
+  background-image: url(img/mangaPanel.jpg);
+  background-size: cover;
+  border-style: solid;
+  border-width: 2px;
+  text-align: center;
+  font-size: 28px;
+  padding: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.howTo span, .ez span, .md span, .hd span, .list span, .main span, .playBtn span, .list2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.howTo span:after , .ez span:after, .md span:after, .hd span:after, .list span:after, .main span:after, .playBtn span:after, .list2 span:after{
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.howTo:hover span, .ez:hover span, .md:hover span, .hd:hover span, .list:hover span, .main:hover span, .playBtn:hover span, .list2:hover span{
+  padding-right: 25px;
+}
+
+.howTo:hover span:after, .ez:hover span:after, .md:hover span:after, .hd:hover span:after, .list:hover span:after, .main:hover span:after, .playBtn:hover span:after, .list2:hover span:after{
+  opacity: 1;
+  right: 0;
+}
+
+.howTo:hover, .ez:hover, .md:hover, .hd:hover, .list:hover, .main:hover, .linku:hover, .playBtn:hover, .list2:hover {
+	box-shadow: 0 5px 16px 0 gray, 0 17px 50px 0 gray;
+}
+
+.ez {
+  display: inline-block;
+  border-radius: 10px;
+  background-image: url(img/pika.jpg);
+  background-size: cover;
+  background-position: bottom;
+  border-style: solid;
+  border-width: 2px;
+  text-align: center;
+  font-size: 28px;
+  padding: 30px;
+  padding-left: 90px;
+  padding-right: 90px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.md {
+  display: inline-block;
+  border-radius: 10px;
+  background-image: url(img/haikyuu.jpg);
+  background-size: cover;
+  background-position: left;
+  border-style: solid;
+  border-width: 2px;
+  text-align: center;
+  font-size: 28px;
+  padding: 30px;
+  padding-left: 70px;
+  padding-right: 70px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.hd {
+  display: inline-block;
+  border-radius: 10px;
+  background-image: url(img/rengoku.png);
+  background-size: cover;
+  background-position: right;
+  border-style: solid;
+  border-width: 2px;
+  text-align: center;
+  font-size: 28px;
+  padding: 30px;
+  padding-left: 85px;
+  padding-right: 85px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.list {
+  display: inline-block;
+  border-radius: 10px;
+  background-image: url(img/foodWars.jpg);
+  background-size: cover;
+  border-style: solid;
+  border-width: 2px;
+  text-align: center;
+  font-size: 28px;
+  padding: 30px;
+  padding-left: 45px;
+  padding-right: 45px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.list2 {
+  display: inline-block;
+  border-radius: 10px;
+  background-image: url(img/foodWars.jpg);
+  background-size: cover;
+  background-position: top;
+  border-style: solid;
+  border-width: 2px;
+  text-align: center;
+  font-size: 28px;
+  padding: 30px;
+  padding-left: 130px;
+  padding-right: 130px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.main {
+  display: inline-block;
+  border-radius: 10px;
+  background-image: url(img/kon.jpg);
+  background-size: cover;
+  background-position: 50% 25%;
+  border-style: solid;
+  border-width: 2px;
+  text-align: center;
+  font-size: 28px;
+  padding: 30px;
+  padding-left: 90px;
+  padding-right: 90px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.mainv2{
+display: inline-block;
+  border-radius: 10px;
+  background-image: url(img/fmab.jpg);
+  background-size: cover;
+  background-position: right;
+  border-style: solid;
+  border-width: 2px;
+  text-align: center;
+  font-size: 12px;
+  padding: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 0px;
+}
+
+.howTxt{
+	color: white;
+	font-family: Pro;
+	font-size: 25px;
+	text-shadow: 1px 1px 2px red, 0 0 1em red, 0 0 0.2em red;
+}
+
+.howTxt2{
+	color: white;
+	font-family: Pro;
+	font-size: 12px;
+}
+
+.mainv2:hover{
+	box-shadow: 0 5px 16px 0 gray, 0 17px 50px 0 gray;
+}
+
+.been{
+	color: white;
+}
+
+.musicPlayer{
+	display: grid;
+	place-items: center;
+}
+
+.header{
+	color: white;
+	font-family: Pro;
+	margin-top: 50px;
+}
+
+
+.tip{
+	color: white;
+	font-family: Pro;
+	margin-bottom: 0px;
+}
+
+.playBtn{
+  display: inline-block;
+  border-radius: 10px;
+  background-image: url(img/spongebob.jpg);
+  background-size: cover;
+  border-style: solid;
+  border-width: 2px;
+  text-align: center;
+  font-size: 28px;
+  padding: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.autocomplete{
+	margin: 50px;
+}
+
+#subb{
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 10px;
+	color: white;
+	text-shadow: 1px 1px 2px red, 0 0 1em red, 0 0 0.2em red;
+	font-family: Pro;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 40px;
+	padding-right: 40px;
+	background-image: url(img/mightguy.jpg);
+	background-size: cover;
+	
+}
+
+#sub2{
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 10px;
+	color: white;
+	text-shadow: 1px 1px 2px red, 0 0 1em red, 0 0 0.2em red;
+	font-family: Pro;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 40px;
+	padding-right: 40px;
+	background-image: url(img/confused.jpg);
+	background-size: cover;
+	
+}
+
+#subb:hover, #sub2:hover{
+	cursor: pointer;
+	box-shadow: 0 5px 16px 0 gray, 0 17px 50px 0 gray;
+	
+}
+
+#userAns{
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 25%;
+}
+
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  width: 35%;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9;
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
+
+.completeList{
+	column-count: 3;
+	margin-left: 100px;
+	margin-right: 100px;
+	padding: 0px;
+	text-align: justify;
+	color: white;
+	font-family: Pro;
+}
+.bold{
+	font-weight: bold;
+	font-size: 25px;
+}
